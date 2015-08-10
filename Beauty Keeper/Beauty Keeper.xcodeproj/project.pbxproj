@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10E303461B78BAD300271EB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E303451B78BAD300271EB6 /* AppDelegate.swift */; };
+		10E303481B78BAD300271EB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E303471B78BAD300271EB6 /* ViewController.swift */; };
+		10E3034B1B78BAD300271EB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10E303491B78BAD300271EB6 /* Main.storyboard */; };
+		10E3034D1B78BAD300271EB6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10E3034C1B78BAD300271EB6 /* Images.xcassets */; };
+		10E303501B78BAD300271EB6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10E3034E1B78BAD300271EB6 /* LaunchScreen.xib */; };
+		10E3035C1B78BAD300271EB6 /* Beauty_KeeperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E3035B1B78BAD300271EB6 /* Beauty_KeeperTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		10E303561B78BAD300271EB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10E303381B78BAD300271EB6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10E3033F1B78BAD300271EB6;
+			remoteInfo = "Beauty Keeper";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		10E303401B78BAD300271EB6 /* Beauty Keeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beauty Keeper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		10E303441B78BAD300271EB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10E303451B78BAD300271EB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		10E303471B78BAD300271EB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		10E3034A1B78BAD300271EB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		10E3034C1B78BAD300271EB6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		10E3034F1B78BAD300271EB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		10E303551B78BAD300271EB6 /* Beauty KeeperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Beauty KeeperTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		10E3035A1B78BAD300271EB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10E3035B1B78BAD300271EB6 /* Beauty_KeeperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beauty_KeeperTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		10E3033D1B78BAD300271EB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10E303521B78BAD300271EB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10E303371B78BAD300271EB6 = {
+			isa = PBXGroup;
+			children = (
+				10E303421B78BAD300271EB6 /* Beauty Keeper */,
+				10E303581B78BAD300271EB6 /* Beauty KeeperTests */,
+				10E303411B78BAD300271EB6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		10E303411B78BAD300271EB6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				10E303401B78BAD300271EB6 /* Beauty Keeper.app */,
+				10E303551B78BAD300271EB6 /* Beauty KeeperTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		10E303421B78BAD300271EB6 /* Beauty Keeper */ = {
+			isa = PBXGroup;
+			children = (
+				10E303451B78BAD300271EB6 /* AppDelegate.swift */,
+				10E303471B78BAD300271EB6 /* ViewController.swift */,
+				10E303491B78BAD300271EB6 /* Main.storyboard */,
+				10E3034C1B78BAD300271EB6 /* Images.xcassets */,
+				10E3034E1B78BAD300271EB6 /* LaunchScreen.xib */,
+				10E303431B78BAD300271EB6 /* Supporting Files */,
+			);
+			path = "Beauty Keeper";
+			sourceTree = "<group>";
+		};
+		10E303431B78BAD300271EB6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				10E303441B78BAD300271EB6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		10E303581B78BAD300271EB6 /* Beauty KeeperTests */ = {
+			isa = PBXGroup;
+			children = (
+				10E3035B1B78BAD300271EB6 /* Beauty_KeeperTests.swift */,
+				10E303591B78BAD300271EB6 /* Supporting Files */,
+			);
+			path = "Beauty KeeperTests";
+			sourceTree = "<group>";
+		};
+		10E303591B78BAD300271EB6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				10E3035A1B78BAD300271EB6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		10E3033F1B78BAD300271EB6 /* Beauty Keeper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10E3035F1B78BAD300271EB6 /* Build configuration list for PBXNativeTarget "Beauty Keeper" */;
+			buildPhases = (
+				10E3033C1B78BAD300271EB6 /* Sources */,
+				10E3033D1B78BAD300271EB6 /* Frameworks */,
+				10E3033E1B78BAD300271EB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Beauty Keeper";
+			productName = "Beauty Keeper";
+			productReference = 10E303401B78BAD300271EB6 /* Beauty Keeper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		10E303541B78BAD300271EB6 /* Beauty KeeperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10E303621B78BAD300271EB6 /* Build configuration list for PBXNativeTarget "Beauty KeeperTests" */;
+			buildPhases = (
+				10E303511B78BAD300271EB6 /* Sources */,
+				10E303521B78BAD300271EB6 /* Frameworks */,
+				10E303531B78BAD300271EB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10E303571B78BAD300271EB6 /* PBXTargetDependency */,
+			);
+			name = "Beauty KeeperTests";
+			productName = "Beauty KeeperTests";
+			productReference = 10E303551B78BAD300271EB6 /* Beauty KeeperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		10E303381B78BAD300271EB6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = stephaniesheng;
+				TargetAttributes = {
+					10E3033F1B78BAD300271EB6 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					10E303541B78BAD300271EB6 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 10E3033F1B78BAD300271EB6;
+					};
+				};
+			};
+			buildConfigurationList = 10E3033B1B78BAD300271EB6 /* Build configuration list for PBXProject "Beauty Keeper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 10E303371B78BAD300271EB6;
+			productRefGroup = 10E303411B78BAD300271EB6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				10E3033F1B78BAD300271EB6 /* Beauty Keeper */,
+				10E303541B78BAD300271EB6 /* Beauty KeeperTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		10E3033E1B78BAD300271EB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10E3034B1B78BAD300271EB6 /* Main.storyboard in Resources */,
+				10E303501B78BAD300271EB6 /* LaunchScreen.xib in Resources */,
+				10E3034D1B78BAD300271EB6 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10E303531B78BAD300271EB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		10E3033C1B78BAD300271EB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10E303481B78BAD300271EB6 /* ViewController.swift in Sources */,
+				10E303461B78BAD300271EB6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10E303511B78BAD300271EB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10E3035C1B78BAD300271EB6 /* Beauty_KeeperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		10E303571B78BAD300271EB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10E3033F1B78BAD300271EB6 /* Beauty Keeper */;
+			targetProxy = 10E303561B78BAD300271EB6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		10E303491B78BAD300271EB6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10E3034A1B78BAD300271EB6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		10E3034E1B78BAD300271EB6 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10E3034F1B78BAD300271EB6 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		10E3035D1B78BAD300271EB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		10E3035E1B78BAD300271EB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		10E303601B78BAD300271EB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Beauty Keeper/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		10E303611B78BAD300271EB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Beauty Keeper/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		10E303631B78BAD300271EB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Beauty KeeperTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Beauty Keeper.app/Beauty Keeper";
+			};
+			name = Debug;
+		};
+		10E303641B78BAD300271EB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Beauty KeeperTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Beauty Keeper.app/Beauty Keeper";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		10E3033B1B78BAD300271EB6 /* Build configuration list for PBXProject "Beauty Keeper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10E3035D1B78BAD300271EB6 /* Debug */,
+				10E3035E1B78BAD300271EB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10E3035F1B78BAD300271EB6 /* Build configuration list for PBXNativeTarget "Beauty Keeper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10E303601B78BAD300271EB6 /* Debug */,
+				10E303611B78BAD300271EB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		10E303621B78BAD300271EB6 /* Build configuration list for PBXNativeTarget "Beauty KeeperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10E303631B78BAD300271EB6 /* Debug */,
+				10E303641B78BAD300271EB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 10E303381B78BAD300271EB6 /* Project object */;
+}
