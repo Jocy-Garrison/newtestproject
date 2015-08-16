@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		10E303461B78BAD300271EB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E303451B78BAD300271EB6 /* AppDelegate.swift */; };
-		10E303481B78BAD300271EB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E303471B78BAD300271EB6 /* ViewController.swift */; };
 		10E3034B1B78BAD300271EB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10E303491B78BAD300271EB6 /* Main.storyboard */; };
 		10E3034D1B78BAD300271EB6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10E3034C1B78BAD300271EB6 /* Images.xcassets */; };
 		10E303501B78BAD300271EB6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10E3034E1B78BAD300271EB6 /* LaunchScreen.xib */; };
 		10E3035C1B78BAD300271EB6 /* Beauty_KeeperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E3035B1B78BAD300271EB6 /* Beauty_KeeperTests.swift */; };
+		10E3039A1B798E2400271EB6 /* Beauty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E303991B798E2400271EB6 /* Beauty.swift */; };
+		10E303CC1B79CF6100271EB6 /* BeautyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E303CB1B79CF6100271EB6 /* BeautyTableViewController.swift */; };
+		10E303CE1B79D62200271EB6 /* addLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 10E303CD1B79D62200271EB6 /* addLogo.jpg */; };
+		10E303D01B7A3EEB00271EB6 /* SearchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E303CF1B7A3EEB00271EB6 /* SearchResultsController.swift */; };
+		10E303D41B7ADC1600271EB6 /* BeautyTableViewControllerTestSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E303D31B7ADC1600271EB6 /* BeautyTableViewControllerTestSearch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +33,17 @@
 		10E303401B78BAD300271EB6 /* Beauty Keeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Beauty Keeper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10E303441B78BAD300271EB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10E303451B78BAD300271EB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		10E303471B78BAD300271EB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		10E3034A1B78BAD300271EB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		10E3034C1B78BAD300271EB6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		10E3034F1B78BAD300271EB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		10E303551B78BAD300271EB6 /* Beauty KeeperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Beauty KeeperTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10E3035A1B78BAD300271EB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10E3035B1B78BAD300271EB6 /* Beauty_KeeperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beauty_KeeperTests.swift; sourceTree = "<group>"; };
+		10E303991B798E2400271EB6 /* Beauty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Beauty.swift; path = "Beauty Keeper/Beauty.swift"; sourceTree = "<group>"; };
+		10E303CB1B79CF6100271EB6 /* BeautyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyTableViewController.swift; sourceTree = "<group>"; };
+		10E303CD1B79D62200271EB6 /* addLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = addLogo.jpg; sourceTree = "<group>"; };
+		10E303CF1B7A3EEB00271EB6 /* SearchResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsController.swift; sourceTree = "<group>"; };
+		10E303D31B7ADC1600271EB6 /* BeautyTableViewControllerTestSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyTableViewControllerTestSearch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,10 @@
 		10E303371B78BAD300271EB6 = {
 			isa = PBXGroup;
 			children = (
+				10E303D31B7ADC1600271EB6 /* BeautyTableViewControllerTestSearch.swift */,
+				10E303CF1B7A3EEB00271EB6 /* SearchResultsController.swift */,
+				10E303CB1B79CF6100271EB6 /* BeautyTableViewController.swift */,
+				10E303991B798E2400271EB6 /* Beauty.swift */,
 				10E303421B78BAD300271EB6 /* Beauty Keeper */,
 				10E303581B78BAD300271EB6 /* Beauty KeeperTests */,
 				10E303411B78BAD300271EB6 /* Products */,
@@ -77,11 +89,8 @@
 		10E303421B78BAD300271EB6 /* Beauty Keeper */ = {
 			isa = PBXGroup;
 			children = (
-				10E303451B78BAD300271EB6 /* AppDelegate.swift */,
-				10E303471B78BAD300271EB6 /* ViewController.swift */,
 				10E303491B78BAD300271EB6 /* Main.storyboard */,
-				10E3034C1B78BAD300271EB6 /* Images.xcassets */,
-				10E3034E1B78BAD300271EB6 /* LaunchScreen.xib */,
+				10E303CD1B79D62200271EB6 /* addLogo.jpg */,
 				10E303431B78BAD300271EB6 /* Supporting Files */,
 			);
 			path = "Beauty Keeper";
@@ -90,6 +99,9 @@
 		10E303431B78BAD300271EB6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				10E303451B78BAD300271EB6 /* AppDelegate.swift */,
+				10E3034E1B78BAD300271EB6 /* LaunchScreen.xib */,
+				10E3034C1B78BAD300271EB6 /* Images.xcassets */,
 				10E303441B78BAD300271EB6 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -192,6 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10E303CE1B79D62200271EB6 /* addLogo.jpg in Resources */,
 				10E3034B1B78BAD300271EB6 /* Main.storyboard in Resources */,
 				10E303501B78BAD300271EB6 /* LaunchScreen.xib in Resources */,
 				10E3034D1B78BAD300271EB6 /* Images.xcassets in Resources */,
@@ -212,8 +225,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10E303481B78BAD300271EB6 /* ViewController.swift in Sources */,
+				10E303D01B7A3EEB00271EB6 /* SearchResultsController.swift in Sources */,
 				10E303461B78BAD300271EB6 /* AppDelegate.swift in Sources */,
+				10E303D41B7ADC1600271EB6 /* BeautyTableViewControllerTestSearch.swift in Sources */,
+				10E303CC1B79CF6100271EB6 /* BeautyTableViewController.swift in Sources */,
+				10E3039A1B798E2400271EB6 /* Beauty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +425,7 @@
 				10E303611B78BAD300271EB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		10E303621B78BAD300271EB6 /* Build configuration list for PBXNativeTarget "Beauty KeeperTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +434,7 @@
 				10E303641B78BAD300271EB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
