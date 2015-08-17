@@ -9,111 +9,99 @@
 import UIKit
 
 class BeautyTableViewControllerTestSearch: UITableViewController, UITableViewDataSource ,UISearchBarDelegate, UISearchDisplayDelegate  {
- 
-
-    var ctrls:[String] = ["Label","Button1-初级","Button1-高级","Button2-初级","Button2-高级","Switch"]
-    // 搜索匹配的结果，Table View使用这个数组作为datasource
-    var ctrlsel:[String] = []
-    
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    // 引用通过storyboard创建的控件 XX 不能定义，不然RUN的时候报错
-//    @IBOutlet weak var searchDisplay: UISearchBar!
+    var beauties = [Beauty]()
+    var filteredBeauties = [Beauty]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //向BeautyArray中添加简单的数据
-        self.ctrlsel = self.ctrls
+        self.beauties = [Beauty(category: "MAKEUP & FRAGRANCE", name:"BB Cream"),
+            Beauty(category:"MOTHER & BABY", name:"Pregnancy Skin Care")
+        ]
+        
+        // 不显示Search Bar边框
+        self.searchDisplayController?.searchBar.searchBarStyle = UISearchBarStyle.Minimal
+
+        // 显示分段条
+        self.searchDisplayController?.searchBar.showsScopeBar = true
+        self.searchDisplayController?.searchBar.scopeButtonTitles = ["All","Junior","Senior"]
         // refresh table
         self.tableView.reloadData()
-//        
-//        // 不显示Search Bar边框
-////        self.searchDisplay.searchBar.searchBarStyle = UISearchBarStyle.Minimal
-//        self.searchDisplayController?.searchBar.searchBarStyle = UISearchBarStyle.Minimal
-//
-//        // 显示分段条
-//        self.searchDisplayController?.searchBar.showsScopeBar = true
-//        self.searchDisplayController?.searchBar.scopeButtonTitles = ["All","Junior","Senior"]
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
-        
-        return 1
-    }
+    
 
     //返回表格行数（也就是返回控件数）
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-//        println("test\(self.ctrlsel.count)")
-        return self.ctrlsel.count
+        //让 tableView 知道什么时候使用过滤过的数据
+        if tableView == self.searchDisplayController!.searchResultsTableView {
+            return self.filteredBeauties.count
+            
+        } else {
+            // 简单的告诉 tableView ，应该包含许多行
+            return self.beauties.count
+        }
     }
 
     //创建各单元显示内容(创建参数indexPath指定的单元）
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //同一形式的单元格重复使用，在声明时已注册
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
-        // 从我们的数组中获得相应的内容
-//        let ctrlss = self.ctrls[indexPath.row]
-        cell.textLabel?.text = self.ctrlsel[indexPath.row]
         
-        // 设置条目Configure the cell...
-//        cell.textLabel!.text = ctrlss.name
+        var beauty : Beauty
+        //在tableview中查询一个元素／条目，如果没有创建一个。
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as! UITableViewCell
+        println("test1")
+        // 检查标准table和搜索结果table是否正常显示，然后从beauty数据集查找需要的对象.如果确实是搜索table，则数据从 filteredBeauties 数组中获取。否则，数据从全部的项目中获取。
+        if tableView == self.searchDisplayController!.searchResultsTableView {
+            println("test2")
+            beauty = filteredBeauties[indexPath.row]
+            
+        } else {
+            println("test3")
+            beauty = beauties[indexPath.row]
+            
+        }
+        
+        // 设置元素／条目
+        cell.textLabel!.text = beauty.name
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
-        // Configure the cell...
         return cell
+
     }
     
-    // 搜索代理UISearchBarDelegate方法，每次改变搜索内容时都会调用
-    func searchBar(searchBar: UISearchBar!, textDidChange searchText: String!) {
-        self.searchText = searchText
-        searchCtrls()
+    // mark: searchBar
+    
+    func filterContentForSearchText(searchText: String, scope: String = "All") {
+        // 使用 searchText （也就是你的搜索字符串） 过滤 beauties ，然后将结果放入filteredBeauties
+        self.filteredBeauties = self.beauties.filter({( beauty: Beauty) -> Bool in
+            
+            let categoryMatch = (scope == "All") || (beauty.category == scope)
+            //rangeOfString() 用于检查是否字符串包含要查找的字符串。如果是，则返回true，表明当前的化妆品包含在过滤的数组中；如果返回false则不包含
+            let stringMatch = beauty.name.rangeOfString(searchText)
+            return categoryMatch && (stringMatch != nil)
+           
+            
+        })
     }
     
-    // 选择分段条时调用
-    func searchBar(searchBar: UISearchBar!, selectedScopeButtonIndexDidChange selectedScope: Int) {
-        println(selectedScope)
-        searchCtrls();
+    // 当用户更改搜索的字符串时，方法被调用。
+    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
+        
+        self.filterContentForSearchText(searchString)
+        
+        return true
+        
     }
     
-    // 保存搜索内容
-    var searchText:String = ""
+    //用于操作分类条的输入
+    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
+        
+        self.filterContentForSearchText(self.searchDisplayController!.searchBar.text)
+        
+        return true
+        
+    }
     
-    // 搜索过滤
-    func searchCtrls() {
-        // 没有搜索内容时显示全部组件
-        if self.searchText == "" {
-            self.ctrlsel = self.ctrls
-        }
-        else {
-//            var scope = self.searchDisplay.selectedScopeButtonIndex
-            var scope = self.searchDisplayController?.searchBar.selectedScopeButtonIndex;
-            // 匹配用户输入内容的前缀
-            self.ctrlsel = []
-            for ctrl in self.ctrls {
-                let lc = ctrl.lowercaseString
-                if lc.hasPrefix(self.searchText) {
-                    if (scope == 0 || (scope == 1 && lc.hasSuffix("初级"))
-                        || (scope == 2 && lc.hasSuffix("高级"))) {
-                            self.ctrlsel.append(ctrl)
-                    }
-                }
-            }
-        }
- }
     
     /*
     // Override to support conditional editing of the table view.

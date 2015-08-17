@@ -29,7 +29,6 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="6rM-Jv-nJr" id="9Iu-8M-ItZ"/>
                             <outlet property="delegate" destination="6rM-Jv-nJr" id="7TO-JJ-tLl"/>
                         </connections>
                     </tableView>
@@ -78,7 +77,7 @@
         <!--Navigation Controller-->
         <scene sceneID="yBH-Gp-yCE">
             <objects>
-                <navigationController id="NVl-ti-eh3" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainStoryboardID" id="NVl-ti-eh3" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OLC-ME-pna">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
