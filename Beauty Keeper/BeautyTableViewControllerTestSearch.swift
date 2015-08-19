@@ -16,21 +16,34 @@ class BeautyTableViewControllerTestSearch: UITableViewController, UITableViewDat
         super.viewDidLoad()
         //向BeautyArray中添加简单的数据
         self.beauties = [Beauty(category: "MAKEUP & FRAGRANCE", name:"BB Cream"),
+            Beauty(category: "MAKEUP & FRAGRANCE", name:"Blush & Bronzer"),
+            Beauty(category: "MAKEUP & FRAGRANCE", name:"Body Mist"),
+            Beauty(category: "SKIN & HAIR CARE", name:"Anti-Aging"),
+            Beauty(category:"SKIN & HAIR CARE", name:"Antiperspirant"),
+            Beauty(category:"SKIN & HAIR CARE", name:"Bath & Shower"),
+            Beauty(category:"SKIN & HAIR CARE", name:"Body & Firming"),
+            Beauty(category:"SKIN & HAIR CARE", name:"Body Treatment"),
+            Beauty(category:"SKIN & HAIR CARE", name:"Cleanser"),
+            Beauty(category:"MEN", name:"Aftershave"),
+            Beauty(category:"MEN", name:"Fragrance"),
+            Beauty(category:"MEN", name:"Hair Care"),
+            Beauty(category:"MOTHER & BABY", name:"Baby Skin Care"),
+            Beauty(category:"MOTHER & BABY", name:"Postpartum Skin Care"),
             Beauty(category:"MOTHER & BABY", name:"Pregnancy Skin Care")
         ]
         
         // 不显示Search Bar边框
         self.searchDisplayController?.searchBar.searchBarStyle = UISearchBarStyle.Minimal
 
-        // 显示分段条
-        self.searchDisplayController?.searchBar.showsScopeBar = true
-        self.searchDisplayController?.searchBar.scopeButtonTitles = ["All","Junior","Senior"]
+//        // 显示分段条
+//        self.searchDisplayController?.searchBar.showsScopeBar = true
+//        self.searchDisplayController?.searchBar.scopeButtonTitles = ["All","Junior","Senior"]
         // refresh table
         self.tableView.reloadData()
         
     }
     
-
+//   mark:  过滤数组
     //返回表格行数（也就是返回控件数）
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //让 tableView 知道什么时候使用过滤过的数据
@@ -49,14 +62,11 @@ class BeautyTableViewControllerTestSearch: UITableViewController, UITableViewDat
         var beauty : Beauty
         //在tableview中查询一个元素／条目，如果没有创建一个。
         let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as! UITableViewCell
-        println("test1")
         // 检查标准table和搜索结果table是否正常显示，然后从beauty数据集查找需要的对象.如果确实是搜索table，则数据从 filteredBeauties 数组中获取。否则，数据从全部的项目中获取。
         if tableView == self.searchDisplayController!.searchResultsTableView {
-            println("test2")
             beauty = filteredBeauties[indexPath.row]
             
         } else {
-            println("test3")
             beauty = beauties[indexPath.row]
             
         }
@@ -85,68 +95,65 @@ class BeautyTableViewControllerTestSearch: UITableViewController, UITableViewDat
     }
     
     // 当用户更改搜索的字符串时，方法被调用。
-    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
+    func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchString searchString: String!) -> Bool {
         
-        self.filterContentForSearchText(searchString)
         
-        return true
+        let scopes = self.searchDisplayController!.searchBar.scopeButtonTitles as! [String]
         
-    }
-    
-    //用于操作分类条的输入
-    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
+        let selectedScope = scopes[self.searchDisplayController!.searchBar.selectedScopeButtonIndex] as String
         
-        self.filterContentForSearchText(self.searchDisplayController!.searchBar.text)
+        self.filterContentForSearchText(searchString, scope: selectedScope)
         
         return true
         
     }
     
+    //用于操作分类条的输入：输入的searchtext如果在Shows Scope Bar属性中定义的分类条下匹配，就输出查找内容
+    func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
+        
+        let scope = self.searchDisplayController!.searchBar.scopeButtonTitles as! [String]
+        
+        self.filterContentForSearchText(self.searchDisplayController!.searchBar.text, scope: scope[searchOption])
+        return true
+        
+    }
     
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
+//  mark: 当向详细视图控件中发送消息时，你需要确定view controller知道哪个用户正在使用的是哪一个table view：完整的列表，或者搜索过的列表。
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        self.performSegueWithIdentifier("beautyDetail", sender: tableView)
+        
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        
+        if segue.identifier == "beautyDetail" {
+            
+            let beautyDetailViewController = segue.destinationViewController as! UIViewController
+            
+            if sender as! UITableView == self.searchDisplayController!.searchResultsTableView {
+                
+                let indexPath = self.searchDisplayController!.searchResultsTableView.indexPathForSelectedRow()!
+                
+                let destinationTitle = self.filteredBeauties[indexPath.row].name
+                
+                beautyDetailViewController.title = destinationTitle
+                
+            } else {
+                
+                let indexPath = self.tableView.indexPathForSelectedRow()!
+                
+                let destinationTitle = self.beauties[indexPath.row].name
+                
+                beautyDetailViewController.title = destinationTitle
+                
+            }
+            
+        }
+        
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-
+    
+ 
 }

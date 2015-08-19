@@ -13,9 +13,7 @@
 		10E303501B78BAD300271EB6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10E3034E1B78BAD300271EB6 /* LaunchScreen.xib */; };
 		10E3035C1B78BAD300271EB6 /* Beauty_KeeperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E3035B1B78BAD300271EB6 /* Beauty_KeeperTests.swift */; };
 		10E3039A1B798E2400271EB6 /* Beauty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E303991B798E2400271EB6 /* Beauty.swift */; };
-		10E303CC1B79CF6100271EB6 /* BeautyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E303CB1B79CF6100271EB6 /* BeautyTableViewController.swift */; };
 		10E303CE1B79D62200271EB6 /* addLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 10E303CD1B79D62200271EB6 /* addLogo.jpg */; };
-		10E303D01B7A3EEB00271EB6 /* SearchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E303CF1B7A3EEB00271EB6 /* SearchResultsController.swift */; };
 		10E303D41B7ADC1600271EB6 /* BeautyTableViewControllerTestSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E303D31B7ADC1600271EB6 /* BeautyTableViewControllerTestSearch.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,9 +38,7 @@
 		10E3035A1B78BAD300271EB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10E3035B1B78BAD300271EB6 /* Beauty_KeeperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beauty_KeeperTests.swift; sourceTree = "<group>"; };
 		10E303991B798E2400271EB6 /* Beauty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Beauty.swift; path = "Beauty Keeper/Beauty.swift"; sourceTree = "<group>"; };
-		10E303CB1B79CF6100271EB6 /* BeautyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyTableViewController.swift; sourceTree = "<group>"; };
 		10E303CD1B79D62200271EB6 /* addLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = addLogo.jpg; sourceTree = "<group>"; };
-		10E303CF1B7A3EEB00271EB6 /* SearchResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsController.swift; sourceTree = "<group>"; };
 		10E303D31B7ADC1600271EB6 /* BeautyTableViewControllerTestSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeautyTableViewControllerTestSearch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,8 +64,6 @@
 			isa = PBXGroup;
 			children = (
 				10E303D31B7ADC1600271EB6 /* BeautyTableViewControllerTestSearch.swift */,
-				10E303CF1B7A3EEB00271EB6 /* SearchResultsController.swift */,
-				10E303CB1B79CF6100271EB6 /* BeautyTableViewController.swift */,
 				10E303991B798E2400271EB6 /* Beauty.swift */,
 				10E303421B78BAD300271EB6 /* Beauty Keeper */,
 				10E303581B78BAD300271EB6 /* Beauty KeeperTests */,
@@ -225,10 +219,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10E303D01B7A3EEB00271EB6 /* SearchResultsController.swift in Sources */,
 				10E303461B78BAD300271EB6 /* AppDelegate.swift in Sources */,
 				10E303D41B7ADC1600271EB6 /* BeautyTableViewControllerTestSearch.swift in Sources */,
-				10E303CC1B79CF6100271EB6 /* BeautyTableViewController.swift in Sources */,
 				10E3039A1B798E2400271EB6 /* Beauty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
